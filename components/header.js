@@ -19,8 +19,8 @@ function Navmenu({ open, setOpen }) {
           key={name}
           href={link}
           className={`${
-            router.pathname === link ? "text-red-500" : "text-black"
-          }`}
+            router.pathname === link ? "text-indigo-600" : "text-black"
+          } font-bold uppercase`}
         >
           {name}
         </Link>
@@ -32,7 +32,7 @@ export default function Header(props) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className={`bg-primary ${props.bgslate} py-5 shadow-md`}>
+    <header className={`${props.bgslate} py-5 border-b border-black/10`}>
       <div className={`max-w-5xl mx-auto justify-between`}>
         <Navmenu open={open} setOpen={setOpen} />
       </div>

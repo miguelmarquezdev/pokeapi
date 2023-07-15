@@ -1,17 +1,33 @@
 import Header from "@/components/header";
 import Pokemon from "@/components/pokemon";
+import { motion } from "framer-motion";
 
 export default function Home({ pokemonListo }) {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05
+      }
+    }
+  }
+  
+  
   return (
     <main>
       <Header />
       <section>
         <div className="max-w-5xl mx-auto px-3 md:px-0 py-20">
-          <ul className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <motion.ul 
+           variants={container}
+           initial="hidden"
+           animate="show"
+          className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {pokemonListo.map((pokemon) => (
               <Pokemon key={pokemon.id} pokemon={pokemon} />
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </section>
     </main>

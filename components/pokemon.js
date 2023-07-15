@@ -1,9 +1,15 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function Pokemon({pokemon}) {
+export default function Pokemon({ pokemon }) {
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+  }
   return (
-    <li className="list-none" size={50}>
+    <motion.li
+      variants={item}
+      className="list-none" size={50}>
       <Link href={`/pokemon/${pokemon.name}`}>
         <div className="bg-slate-200 px-3 flex flex-col md:flex-row rounded-xl justify-between items-center">
           <div className="flex flex-col gap-y-3 order-2 md:order-1">
@@ -30,6 +36,6 @@ export default function Pokemon({pokemon}) {
           />
         </div>
       </Link>
-    </li>
+    </motion.li>
   );
 }
