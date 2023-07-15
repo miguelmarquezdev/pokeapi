@@ -10,7 +10,7 @@ export default function Producto({ resultado }) {
     <div>
       <Header bgslate={`${resultado.types[0].type.name} absolute w-full`} />
       <div className={`${resultado.types[0].type.name} h-[40vh] md:h-[50vh] `}></div>
-      <div className="shadow-md max-w-5xl mx-auto flex flex-col md:flex-row bg-white md:-mt-[30vh] rounded-2xl p-10">
+      <div className="shadow-md max-w-5xl mx-auto flex flex-col md:flex-row bg-white md:-mt-[30vh] rounded-2xl p-5 md:p-10">
         <div className="w-full md:w-1/2">
           <motion.img
             src={resultado.sprites.other.dream_world.front_default}
