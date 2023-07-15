@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grass{
+    @apply bg-green-500 text-white;
+}
+.poison{
+    @apply bg-violet-700 text-white;
+}
+.fire{
+    @apply bg-orange-600 text-white;
+}
+.water{
+    @apply bg-sky-500 text-white;
+}
+.bug{
+    @apply bg-lime-500 text-white;
+}
+.normal{
+    @apply bg-gray-50 text-black;
+}
+.flying{
+    @apply bg-teal-100 text-black;
+}
