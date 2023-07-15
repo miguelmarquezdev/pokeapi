@@ -8,20 +8,20 @@ export default function Producto({ resultado }) {
   console.log(resultado);
   return (
     <div>
-      <Header bgslate={`${resultado.types[0].type.name} absolute w-full `} />
-      <div className={`${resultado.types[0].type.name} h-[50vh] `}></div>
-      <div className="shadow-md max-w-5xl mx-auto flex bg-white -mt-[30vh] rounded-2xl p-10">
-        <div className="w-1/2">
+      <Header bgslate={`${resultado.types[0].type.name} absolute w-full`} />
+      <div className={`${resultado.types[0].type.name} h-[40vh] md:h-[50vh] `}></div>
+      <div className="shadow-md max-w-5xl mx-auto flex flex-col md:flex-row bg-white md:-mt-[30vh] rounded-2xl p-10">
+        <div className="w-full md:w-1/2">
           <motion.img
             src={resultado.sprites.other.dream_world.front_default}
             width={450}
             height={450}
             layoutId={resultado.sprites.other.dream_world.front_default}
-            className="drop-shadow-lg"
+            className="drop-shadow-lg md:mt-0 -mt-[30vh]"
           />
         </div>
-        <div className=" w-1/2 border-l-2 border-zinc-300/50  pl-10">
-          <h1 className="font-black text-5xl uppercase text-center">
+        <div className="w-full md:w-1/2 md:border-l-2 border-zinc-300/50  md:pl-10">
+          <h1 className="font-black text-5xl uppercase text-center mb-10 mt-5 md:m-0">
             {resultado.name}
           </h1>
           <div className="flex gap-5 justify-center mt-5">

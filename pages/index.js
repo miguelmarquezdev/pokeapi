@@ -18,7 +18,7 @@ export default function Home({ pokemonListo }) {
     <main>
       <Header />
       <section>
-        <div className="max-w-5xl mx-auto px-3 md:px-0 py-20">
+        <div className="max-w-5xl mx-auto px-3 md:px-0 py-5 md:py-20">
           <motion.ul 
            variants={container}
            initial="hidden"
